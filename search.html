@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Search</title>
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Threat Analysis</a>
+    <button name class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="addData.html">Add Data</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="search.html">Search</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="input-group input-group-lg">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="searching">Search for a threat</span>
+    </div>
+    <input id = "typing" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Here">
+    <div class="input-group-prepend">
+        <button class="btn btn-outline-secondary" type="button" id = "button1" data-dissmiss="modal">Search</button>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Please Enter a value</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="list-group" id = "list">
+    <a class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between ">
+            <h5 class="mb-1">Hooking</h5>
+            <small class="text-muted">Privilege Escalation</small>
+        </div>
+        <p class="mb-1">Hooking involves redirecting calls to these functions and can be implemented via:</p>
+        <small class="text-muted">Hooks procedures, which intercept and execute designated code in response to events such as messages, keystrokes, and mouse inputs</small>
+    </a>
+    <a class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Fallback Channels</h5>
+            <small class="text-muted">Command and Control</small>
+        </div>
+        <p class="mb-1">Adversaries may use fallback or alternate communication channels if the primary channel is compromised or inaccessible in order to maintain reliable command and control and to avoid data transfer thresholds. Some examples include</p>
+        <small class="text-muted">APT41 used the Steam community page as a fallback mechanism for C2</small>
+    </a>
+    <a class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Binary Padding</h5>
+            <small class="text-muted">Defense Evasion</small>
+        </div>
+        <p class="mb-1">Adversaries can use binary padding to add junk data and change the on-disk representation of malware without affecting the functionality or behavior of the binary. This will often increase the size of the binary beyond what some security tools are capable of handling due to file size limitations. Some examples include</p>
+        <small class="text-muted">APT32 includes garbage code to mislead anti-malware software and researchers</small>
+    </a>
+    <a class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Fallback Channels</h5>
+            <small class="text-muted">Command and Control</small>
+        </div>
+        <p class="mb-1">Adversaries may use fallback or alternate communication channels if the primary channel is compromised or inaccessible in order to maintain reliable command and control and to avoid data transfer thresholds. Some examples include</p>
+        <small class="text-muted">APT41 used the Steam community page as a fallback mechanism for C2</small>
+    </a>
+    <a class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Fallback Channels</h5>
+            <small class="text-muted">Command and Control</small>
+        </div>
+        <p class="mb-1">Adversaries may use fallback or alternate communication channels if the primary channel is compromised or inaccessible in order to maintain reliable command and control and to avoid data transfer thresholds. Some examples include</p>
+        <small class="text-muted">APT41 used the Steam community page as a fallback mechanism for C2</small>
+    </a>
+</div>
+</body>
+<script>
+    $("#list").hide();
+    $(document).ready(function () {
+        $("#button1").click(function () {
+            var txt = $('#typing');
+            if (txt.val() != null && txt.val() != ''){
+                $("#list").show();
+            } else{
+                $("#myModal").modal('show')
+            }
+
+        });
+    });
+</script>
+</html>
